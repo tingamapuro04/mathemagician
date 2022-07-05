@@ -1,51 +1,65 @@
-function Calculator() {
-  return (
-    <div className="App">
-      <div className="calculator">
-        <Result />
-        <div className="second">
-          <Digits />
+/*eslint-disable*/
+import React from 'react';
 
-          <Operator />
+
+
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="calculator">
+          <Result />
+          <div className="second">
+            <Digits />
+            <Operator />
+          </div>
+          <Bottom />
         </div>
-        <Bottom />
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-function Result() {
-  return (
-    <div className="result">
-      0
-    </div>
-  );
+class Result extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <div className="result">
+        0
+      </div>
+    )
+  }
 }
 
-function Operator() {
-  return (
-    <div className="operator">
+class Operator extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <div className="operator">
       <button type="button">÷</button>
       <button type="button">×</button>
       <button type="button">–</button>
       <button type="button">+</button>
     </div>
-  );
+    )
+  }
 }
 
-function Bottom() {
-  return (
-    <div className="last">
-      <button type="button">0</button>
-      <button type="button">.</button>
-      <button className="equals" type="button">=</button>
-    </div>
-  );
-}
-
-function Digits() {
-  return (
-    <div className="digits">
+class Digits extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <div className="digits">
       <button type="button">AC</button>
       <button type="button">+/-</button>
       <button type="button">%</button>
@@ -59,7 +73,23 @@ function Digits() {
       <button type="button">2</button>
       <button type="button">3</button>
     </div>
-  );
+    )
+  }
+}
+
+class Bottom extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <div className="last">
+      <button type="button">0</button>
+      <button type="button">.</button>
+      <button className="equals" type="button">=</button>
+    </div>
+    )
+  }
 }
 
 export default Calculator;
