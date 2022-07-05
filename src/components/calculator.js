@@ -1,3 +1,19 @@
+function Calculator() {
+  return (
+    <div className="App">
+      <div className="calculator">
+        <Result />
+        <div className="second">
+          <Digits />
+
+          <Operator />
+        </div>
+        <Bottom />
+      </div>
+    </div>
+  );
+}
+
 function Result() {
   return (
     <div className="result">
@@ -46,6 +62,4 @@ function Digits() {
   );
 }
 
-export {
-  Result, Operator, Bottom, Digits,
-};
+export default Calculator;
