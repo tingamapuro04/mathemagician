@@ -33,7 +33,7 @@ import './App.css';
 const App = () => {
   const Numbers = () => {
     const digits = [];
-    for (let i = 1; i < 10; i += 1) {
+    for (let i = 9; i > 0; i -= 1) {
       digits.push(
         <button type="button" key={i}>{i}</button>,
       );
@@ -46,17 +46,25 @@ const App = () => {
         <div className="result">
           0
         </div>
-        <div className="operator">
-          <button type="button">/</button>
-          <button type="button">*</button>
-          <button type="button">-</button>
-          <button type="button">+</button>
+        <div className="second">
+          <div className="digits">
+            <button type="button">AC</button>
+            <button type="button">+/-</button>
+            <button type="button">%</button>
+            { Numbers() }
+          </div>
+
+          <div className="operator">
+            <button type="button">/</button>
+            <button type="button">*</button>
+            <button type="button">-</button>
+            <button type="button">+</button>
+          </div>
         </div>
-        <div className="digits">
-          { Numbers() }
+        <div className="last">
           <button type="button">0</button>
           <button type="button">.</button>
-          <button type="button">=</button>
+          <button className="equals" type="button">=</button>
         </div>
       </div>
     </div>
