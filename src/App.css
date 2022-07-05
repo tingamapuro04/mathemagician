@@ -30,6 +30,10 @@
   display: flex;
 }
 
+button {
+  font-size: 1.4rem;
+}
+
 .digits {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -69,6 +73,3 @@
   opacity: 0.8;
 }
 
-button {
-  font-size: 1.4rem;
-}
