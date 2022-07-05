@@ -29,45 +29,51 @@
 // export default App;
 
 import './App.css';
+import {
+  Result, Operator, Bottom, Digits,
+} from './components/calculator';
 
-const App = () => {
-  const Numbers = () => {
-    const digits = [];
-    for (let i = 9; i > 0; i -= 1) {
-      digits.push(
-        <button type="button" key={i}>{i}</button>,
-      );
-    }
-    return digits;
-  };
+function App() {
+  // const Numbers = () => {
+  //   const digits = [];
+  //   for (let i = 9; i > 0; i -= 1) {
+  //     digits.push(
+  //       <button type="button" key={i}>{i}</button>,
+  //     );
+  //   }
+  //   return digits;
+  // };
   return (
     <div className="App">
       <div className="calculator">
-        <div className="result">
-          0
-        </div>
+        <Result />
         <div className="second">
-          <div className="digits">
+          <Digits />
+          {/* <div className="digits">
             <button type="button">AC</button>
             <button type="button">+/-</button>
             <button type="button">%</button>
             { Numbers() }
-          </div>
+          </div> */}
 
-          <div className="operator">
-            <button type="button">/</button>
-            <button type="button">*</button>
-            <button type="button">-</button>
-            <button type="button">+</button>
-          </div>
+          <Operator />
         </div>
-        <div className="last">
-          <button type="button">0</button>
-          <button type="button">.</button>
-          <button className="equals" type="button">=</button>
-        </div>
+        <Bottom />
       </div>
     </div>
   );
-};
+}
+
+// const atieno = (props) => {
+//   return (
+//     <h1>Hello</h1>
+//   )
+// }
+
+// function Atieno() {
+//   return (
+//     <h1>Hello</h1>
+//   );
+// }
+
 export default App;
