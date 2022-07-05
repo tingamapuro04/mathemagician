@@ -25,9 +25,9 @@ function Result() {
 function Operator() {
   return (
     <div className="operator">
-      <button type="button">/</button>
-      <button type="button">*</button>
-      <button type="button">-</button>
+      <button type="button">÷</button>
+      <button type="button">×</button>
+      <button type="button">–</button>
       <button type="button">+</button>
     </div>
   );
