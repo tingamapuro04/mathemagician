@@ -34,14 +34,25 @@ button {
   font-size: 1.4rem;
 }
 
-.digits {
+button:hover {
+  background: #eee;
+  scale: 1.2;
+}
+
+.Digits {
+  display: grid;
+  grid-template-columns: 33.333% 33.333% 33.333%;
+}
+
+/* .digits {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-auto-flow: dense;
-}
+} */
 
 .digits button {
-  padding: 20px 40px;
+  padding: 20px 0;
+  width: 100px;
   border-radius: 0;
 }
 
@@ -58,17 +69,27 @@ button {
   opacity: 0.8;
 }
 
-.last {
+/* .last {
   display: grid;
   grid-template-columns: 54%  auto 23%;
-}
+} */
 
 .last button {
   border-radius: 0;
-  padding: 20px 40px;
+  width: 100%;
+  padding: 20px 0;
 }
 
 .equals {
   background: orangered;
   opacity: 0.8;
+}
+
+.lastOne {
+  display: grid;
+  grid-template-columns: 50.5% 25% 24.5%;
+}
+
+.lastOne:nth-child(even) {
+  background: red;
 }
