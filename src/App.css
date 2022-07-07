@@ -1,39 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  width: 100%;
+}
+
+.caculator {
+  max-width: 75%;
+}
+
+.result {
+  width: 100%;
+  background: rgb(130, 117, 117);
+  text-align: right;
+  padding: 5% 2%;
+  font-size: 1.6rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.second {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+button {
+  font-size: 1.4rem;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.digits {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-auto-flow: dense;
+}
+
+.digits button {
+  padding: 20px 40px;
+  border-radius: 0;
+}
+
+.operator {
+  display: flex;
+  flex-direction: column;
+}
+
+.operator button {
+  font-size: 1.4rem;
+  border-radius: 0;
+  padding: 20px 40px;
+  background: orangered;
+  opacity: 0.8;
+}
+
+.last {
+  display: grid;
+  grid-template-columns: 54%  auto 23%;
+}
+
+.last button {
+  border-radius: 0;
+  padding: 20px 40px;
+}
+
+.equals {
+  background: orangered;
+  opacity: 0.8;
 }
