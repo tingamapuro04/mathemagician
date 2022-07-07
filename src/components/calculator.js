@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import { calculateNewValue } from '@testing-library/user-event/dist/utils';
 import React from 'react';
-import calculate from '../logic/calcualte'
+import calculate from '../Logic/calculate'
 
 
 
