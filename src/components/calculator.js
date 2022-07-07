@@ -2,7 +2,6 @@
 import { calculateNewValue } from '@testing-library/user-event/dist/utils';
 import React from 'react';
 import calculate from '../logic/calcualte'
-import operate from '../logic/operate';
 
 
 
@@ -17,14 +16,10 @@ class Calculator extends React.Component {
   }
 
   eventHandle = (e) => {
-    const val = e.target.textContent
+    const val = e.target.innerText
     this.setState((obj) => calculate(obj, val))
-    console.log(val)
   }
 
-  eventClear = () => {
-    this.setState({total:null, next: null, operation: null})
-  }
 
   eventcomplete = () => {
     this.setState({
@@ -46,7 +41,7 @@ class Calculator extends React.Component {
           <Result result= { result } />
           <div className="second">
             <div className="Digits">
-              <Digits name="AC" handle= {this.eventClear} />
+              <Digits name="AC" handle= {this.eventHandle} />
               <Digits name="+/-" handle= {this.eventHandle} />
               <Digits name="%" handle= {this.eventHandle} />
               <Digits name="7" handle= {this.eventHandle} />
@@ -61,7 +56,7 @@ class Calculator extends React.Component {
             </div>
             <div className="operations">
               <Operator name ="÷" handle= {this.eventHandle} />
-              <Operator name ="×" handle= {this.eventHandle} />
+              <Operator name ="x" handle= {this.eventHandle} />
               <Operator name ="-" handle= {this.eventHandle} />
               <Operator name ="+" handle= {this.eventHandle} />
             </div>
