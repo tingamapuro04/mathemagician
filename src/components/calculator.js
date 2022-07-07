@@ -12,12 +12,35 @@ class Calculator extends React.Component {
     return (
       <div className="App">
         <div className="calculator">
-          <Result />
+          <Result result="0"/>
           <div className="second">
-            <Digits />
-            <Operator />
+            <div className="Digits">
+              <Digits digit="AC"/>
+              <Digits digit="+/-"/>
+              <Digits digit="%"/>
+              <Digits digit="7"/>
+              <Digits digit="8"/>
+              <Digits digit="9"/>
+              <Digits digit="4"/>
+              <Digits digit="5"/>
+              <Digits digit="6"/>
+              <Digits digit="1"/>
+              <Digits digit="2"/>
+              <Digits digit="3"/>
+            </div>
+            <div className="operations">
+              <Operator operator="÷"/>
+              <Operator operator="×"/>
+              <Operator operator="-"/>
+              <Operator operator="+"/>
+            </div>
           </div>
-          <Bottom />
+          <div className="lastOne">
+            <Bottom last="0"/>
+            <Bottom last="."/>
+            <Bottom last="="/>
+          </div>
+
         </div>
       </div>
     );
@@ -31,7 +54,7 @@ class Result extends React.Component {
   render() {
     return (
       <div className="result">
-        0
+        {this.props.result}
       </div>
     )
   }
@@ -44,10 +67,7 @@ class Operator extends React.Component {
   render() {
     return (
       <div className="operator">
-      <button type="button">÷</button>
-      <button type="button">×</button>
-      <button type="button">–</button>
-      <button type="button">+</button>
+      <button type="button"> {this.props.operator} </button>
     </div>
     )
   }
@@ -60,19 +80,8 @@ class Digits extends React.Component {
   render() {
     return (
       <div className="digits">
-      <button type="button">AC</button>
-      <button type="button">+/-</button>
-      <button type="button">%</button>
-      <button type="button">7</button>
-      <button type="button">8</button>
-      <button type="button">9</button>
-      <button type="button">4</button>
-      <button type="button">5</button>
-      <button type="button">6</button>
-      <button type="button">1</button>
-      <button type="button">2</button>
-      <button type="button">3</button>
-    </div>
+        <button type="button"> {this.props.digit} </button>
+      </div>
     )
   }
 }
@@ -84,9 +93,7 @@ class Bottom extends React.Component {
   render() {
     return (
       <div className="last">
-      <button type="button">0</button>
-      <button type="button">.</button>
-      <button className="equals" type="button">=</button>
+      <button type="button"> {this.props.last} </button>
     </div>
     )
   }
