@@ -1,44 +1,75 @@
 /*eslint-disable*/
+import { calculateNewValue } from '@testing-library/user-event/dist/utils';
 import React from 'react';
+import calculate from '../logic/calcualte'
+import operate from '../logic/operate';
 
 
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      total: 0,
+      next: '',
+      operation: ''
+    }
+  }
+
+  eventHandle = (e) => {
+    const val = e.target.textContent
+    this.setState((obj) => calculate(obj, val))
+    console.log(val)
+  }
+
+  eventClear = () => {
+    this.setState({total:null, next: null, operation: null})
+  }
+
+  eventcomplete = () => {
+    this.setState({
+      total: 0,
+      next: null,
+      operation: null
+    })
   }
 
   render() {
+
+    const { total, next, operation} = this.state
+
+    const result = `${ total || next || operation ? `${ total || '' } ${operation || ''} ${next || ''}` :  0}`
+
     return (
       <div className="App">
         <div className="calculator">
-          <Result result="0"/>
+          <Result result= { result } />
           <div className="second">
             <div className="Digits">
-              <Digits digit="AC"/>
-              <Digits digit="+/-"/>
-              <Digits digit="%"/>
-              <Digits digit="7"/>
-              <Digits digit="8"/>
-              <Digits digit="9"/>
-              <Digits digit="4"/>
-              <Digits digit="5"/>
-              <Digits digit="6"/>
-              <Digits digit="1"/>
-              <Digits digit="2"/>
-              <Digits digit="3"/>
+              <Digits name="AC" handle= {this.eventClear} />
+              <Digits name="+/-" handle= {this.eventHandle} />
+              <Digits name="%" handle= {this.eventHandle} />
+              <Digits name="7" handle= {this.eventHandle} />
+              <Digits name="8" handle= {this.eventHandle} />
+              <Digits name="9" handle= {this.eventHandle} />
+              <Digits name="4" handle= {this.eventHandle} />
+              <Digits name="5" handle= {this.eventHandle} />
+              <Digits name="6" handle= {this.eventHandle} />
+              <Digits name="1" handle= {this.eventHandle} />
+              <Digits name="2" handle= {this.eventHandle} />
+              <Digits name="3" handle= {this.eventHandle} />
             </div>
             <div className="operations">
-              <Operator operator="÷"/>
-              <Operator operator="×"/>
-              <Operator operator="-"/>
-              <Operator operator="+"/>
+              <Operator name ="÷" handle= {this.eventHandle} />
+              <Operator name ="×" handle= {this.eventHandle} />
+              <Operator name ="-" handle= {this.eventHandle} />
+              <Operator name ="+" handle= {this.eventHandle} />
             </div>
           </div>
           <div className="lastOne">
-            <Bottom last="0"/>
-            <Bottom last="."/>
-            <Bottom last="="/>
+            <Bottom name ="0" handle= {this.eventHandle} />
+            <Bottom name ="." handle= {this.eventHandle} />
+            <Bottom name ="=" handle= {this.eventHandle} />
           </div>
 
         </div>
@@ -64,10 +95,12 @@ class Operator extends React.Component {
   constructor(props) {
     super(props)
   }
+
+
   render() {
     return (
       <div className="operator">
-      <button type="button"> {this.props.operator} </button>
+      <button type="button" onClick= {this.props.handle} > {this.props.name} </button>
     </div>
     )
   }
@@ -80,7 +113,7 @@ class Digits extends React.Component {
   render() {
     return (
       <div className="digits">
-        <button type="button"> {this.props.digit} </button>
+        <button type="button" onClick={ this.props.handle } > {this.props.name} </button>
       </div>
     )
   }
@@ -93,7 +126,7 @@ class Bottom extends React.Component {
   render() {
     return (
       <div className="last">
-      <button type="button"> {this.props.last} </button>
+      <button type="button" onClick={ this.props.handle } > {this.props.name} </button>
     </div>
     )
   }

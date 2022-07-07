@@ -36,6 +36,7 @@ button {
 
 button:hover {
   background: #eee;
+  scale: 1.2;
 }
 
 .Digits {
