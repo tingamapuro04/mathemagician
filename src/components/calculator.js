@@ -73,58 +73,37 @@ class Calculator extends React.Component {
   }
 }
 
-class Result extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return (
-      <div className="result">
-        {this.props.result}
-      </div>
-    )
-  }
-}
-
-class Operator extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-
-  render() {
-    return (
-      <div className="operator">
-      <button type="button" onClick= {this.props.handle} > {this.props.name} </button>
+const Result = (props) => {
+  return (
+    <div className="result">
+      {props.result}
     </div>
-    )
-  }
+  )
 }
 
-class Digits extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return (
-      <div className="digits">
-        <button type="button" onClick={ this.props.handle } > {this.props.name} </button>
-      </div>
-    )
-  }
+const Operator = (props) => {
+  return (
+    <div className="operator">
+    <button type="button" onClick= {props.handle} > {props.name} </button>
+  </div>
+  )
 }
 
-class Bottom extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  render() {
-    return (
-      <div className="last">
-      <button type="button" onClick={ this.props.handle } > {this.props.name} </button>
+const Digits = (props) =>  {
+
+  return (
+    <div className="digits">
+      <button type="button" onClick={ props.handle } > {props.name} </button>
     </div>
-    )
-  }
+  )
+}
+
+const Bottom = (props) =>  {
+  return (
+    <div className="last">
+    <button type="button" onClick={ props.handle } > { props.name} </button>
+  </div>
+  )
 }
 
 export default Calculator;
