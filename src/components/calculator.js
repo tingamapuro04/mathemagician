@@ -4,9 +4,9 @@ import calculate from '../Logic/calculate';
 
 const Calculator = () => {
   const [calc, setCalc] = useState({
-    total: 0,
-    next: '',
-    operation: '',
+    total: null,
+    next: null,
+    operation: null,
   });
 
   const eventHandle = (e) => {
@@ -51,9 +51,7 @@ const Calculator = () => {
   );
 };
 
-// eslint-disable-next-line react/prop-types
 const Result = ({ result }) => {
-  // eslint-disable-next-line react/prop-types
   const { total, next, operation } = result;
   const results = `${total || next || operation ? `${total || ''} ${operation || ''} ${next || ''}` : 0}`;
   return (
@@ -62,6 +60,17 @@ const Result = ({ result }) => {
     </div>
   );
 };
+
+Result.propTypes = {
+  result: PropTypes.shape({
+    total: PropTypes.string,
+    next: PropTypes.string,
+    operation: PropTypes.string,
+
+  }),
+};
+
+Result.defaultProps = { result: null };
 
 const Operator = ({ handle, name }) => (
   <div className="operator">
