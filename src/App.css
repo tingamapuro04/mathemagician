@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-direction: column;
 }
 
 .caculator {
@@ -92,4 +93,28 @@ button:hover {
 
 .lastOne:nth-child(even) {
   background: red;
+}
+
+nav {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.8rem;
+  color: black;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.UnList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2.5%;
+  margin-right: 3%;
 }
