@@ -1,20 +1,20 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // const UnList = { display: 'flex', listStyle: 'none', paddingRight: 0 };
 function Nav() {
   return (
     <nav>
-      <h1 className="title" href="/">Math Magician</h1>
+      <p className="title">Math Magician</p>
       <ul className="UnList">
-        <li>
-          <a href="/Home">Home</a>
+        <li className="Litem">
+          <Link to="/">Home</Link>
         </li>
-        <li>
-          <a href="/calculator">Calculator</a>
+        <li className="Litem">
+          <Link to="/calculator">Calculator</Link>
         </li>
-        <li>
-          <a href="/quote">Quote</a>
+        <li className="Litem">
+          <Link to="/quote">Quote</Link>
         </li>
       </ul>
     </nav>

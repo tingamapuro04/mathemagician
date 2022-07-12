@@ -10,12 +10,14 @@ import { Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
     <>
-      <Nav />
-      <Routes>
-        <Route path="/calculator" element= {<Calculator />} />
-        <Route path="/Home" element= {<About />} />
-        <Route path="/quote" element= {<Quote />} />
-      </Routes>
+      <div className="main">
+        <Nav />
+        <Routes>
+          <Route path="/calculator" element= {<Calculator />} />
+          <Route path="/" element= {<About />} />
+          <Route path="/quote" element= {<Quote />} />
+        </Routes>
+      </div>
     </>
   );
 }

@@ -5,20 +5,37 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App {
-  display: flex;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-direction: column;
+body {
+  width: 98vw;
 }
 
-.caculator {
-  max-width: 75%;
+.main {
+  width: inherit;
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: #eee;
+  padding-bottom: 7%;
+}
+
+.calculator {
+  padding-top: 2%;
+  padding-right: 10%;
+}
+
+.picato {
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-start;
 }
 
 .result {
+  margin-top: 8%;
   width: 100%;
   background: rgb(130, 117, 117);
   text-align: right;
@@ -45,14 +62,8 @@ button:hover {
   grid-template-columns: 33.333% 33.333% 33.333%;
 }
 
-/* .digits {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-auto-flow: dense;
-} */
-
 .digits button {
-  padding: 20px 0;
+  padding: 10px 0;
   width: 100px;
   border-radius: 0;
 }
@@ -65,20 +76,15 @@ button:hover {
 .operator button {
   font-size: 1.4rem;
   border-radius: 0;
-  padding: 20px 40px;
+  padding: 10px 40px;
   background: orangered;
   opacity: 0.8;
 }
 
-/* .last {
-  display: grid;
-  grid-template-columns: 54%  auto 23%;
-} */
-
 .last button {
   border-radius: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: 12px 0;
 }
 
 .equals {
@@ -98,13 +104,16 @@ button:hover {
 nav {
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .title {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.8rem;
-  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(68, 47, 174);
+  padding: 1% 0;
 }
 
 nav a {
@@ -116,5 +125,29 @@ nav a {
   align-items: center;
   list-style: none;
   gap: 2.5%;
-  margin-right: 3%;
+}
+
+.Litem {
+  background: rgb(162, 161, 161);
+  border-radius: 50%;
+  padding: 10px 7%;
+  color: blue;
+}
+
+.Litem:hover {
+  background: rgb(217, 210, 210);
+}
+
+.Home {
+  margin: 7% 4%;
+  font-size: 1.2rem;
+}
+
+.Home h2 {
+  margin-bottom: 5%;
+}
+
+.Quote {
+  margin: 20% 5%;
+  font-size: 1.2rem;
 }
