@@ -10,6 +10,9 @@ A simple math calculator built with React
 - Css
 - Javascript
 
+## Live demo
+[Live project](https://62cf3c3dbad44b45906302e0--neon-puffpuff-9947bf.netlify.app/)
+
 ## Getting Started
 To get a local copy up and running, follow these simple steps.
 
