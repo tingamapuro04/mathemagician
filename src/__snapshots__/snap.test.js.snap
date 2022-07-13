@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1 1`] = `
+<div
+  className="App"
+>
+  <h3
+    className="picato"
+  >
+    Lets do some maths
+  </h3>
+  <div
+    className="calculator"
+  >
+    <div
+      className="result"
+    >
+      0
+    </div>
+    <div
+      className="second"
+    >
+      <div
+        className="Digits"
+      >
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            AC
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            +/-
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            %
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            7
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            8
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            9
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            4
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            5
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            6
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            1
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            2
+             
+          </button>
+        </div>
+        <div
+          className="digits"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            3
+             
+          </button>
+        </div>
+      </div>
+      <div
+        className="operations"
+      >
+        <div
+          className="operator"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            ÷
+             
+          </button>
+        </div>
+        <div
+          className="operator"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            x
+             
+          </button>
+        </div>
+        <div
+          className="operator"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            -
+             
+          </button>
+        </div>
+        <div
+          className="operator"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+             
+            +
+             
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="lastOne"
+    >
+      <div
+        className="last"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+           
+          0
+           
+        </button>
+      </div>
+      <div
+        className="last"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+           
+          .
+           
+        </button>
+      </div>
+      <div
+        className="last"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+           
+          =
+           
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="Quote"
+>
+  <p>
+    Without mathematics, theres nothing you can do. Everything around you is mathematics. Everything around you is numbers. — Shakuntala Devi, Indian writer and mental calculator
+  </p>
+</div>
+`;
+
+exports[`renders correctly 2`] = `
+<div
+  className="Quote"
+>
+  <p>
+    Without mathematics, theres nothing you can do. Everything around you is mathematics. Everything around you is numbers. — Shakuntala Devi, Indian writer and mental calculator
+  </p>
+</div>
+`;
+
+exports[`renders the about 1`] = `
+<div
+  className="Home"
+>
+  <h2>
+    Welcome to the page!
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem minus quia earum expedita molestiae fuga, enim distinctio ducimus, quisquam nulla nobis tempore hic? Cupiditate libero       consequatur, veritatis sit sequi voluptatibus doloremque dolore cumque expedita ipsa in nam. Adipisci maxime ullam .
+  </p>
+</div>
+`;
+
+exports[`renders the about 2`] = `
+<div
+  className="Home"
+>
+  <h2>
+    Welcome to the page!
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem minus quia earum expedita molestiae fuga, enim distinctio ducimus, quisquam nulla nobis tempore hic? Cupiditate libero       consequatur, veritatis sit sequi voluptatibus doloremque dolore cumque expedita ipsa in nam. Adipisci maxime ullam .
+  </p>
+</div>
+`;
