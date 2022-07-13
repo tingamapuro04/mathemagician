@@ -1,9 +1,7 @@
-import { BrowserRouter as Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import Quote from './components/Quote';
 import Calculator from './components/calculator';
 import About from './components/About';
-import Nav from './components/nav'
 
 it('renders correctly', () => {
   const tree = renderer
@@ -25,5 +23,3 @@ it('renders the about', () => {
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
-
-
