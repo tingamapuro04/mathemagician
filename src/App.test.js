@@ -1,8 +1,22 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import operate from './Logic/operate';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('operate', () => {
+  test('addition', () => {
+    expect(operate(1, 1, '+')).toBe('2');
+  });
+
+  test('Subtraction', () => {
+    expect(operate(1, 1, '-')).toBe('0');
+  });
+
+  test('Multiplication', () => {
+    expect(operate(2, 3, 'x')).toBe('6');
+  });
+
+  test('Division', () => {
+    expect(operate(6, 3, '÷')).toBe('2');
+  });
+  test('modulo', () => {
+    expect(operate(7, 3, '%')).toBe('1');
+  });
 });
