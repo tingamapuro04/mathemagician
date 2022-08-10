@@ -1,6 +1,9 @@
 ## Project Name
 Math Magician
 
+## Preview
+!
+
 ## Description
 A simple math calculator built with React
 
