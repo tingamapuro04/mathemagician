@@ -2,7 +2,7 @@
 Math Magician
 
 ## Preview
-![](images/calculator.jpeg)
+![](images/Kalku.jpeg)
 
 ## Description
 A simple math calculator built with React
